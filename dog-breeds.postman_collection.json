@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "f1c0d4f4-5c5c-47f8-ac08-822676f6719f",
+		"name": "dog-breeds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET dog breed by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/id/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET dog breeds by max height",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/maxHeight/900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"maxHeight",
+						"900"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET dog breed by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/breedName/golden_retriever",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"breedName",
+						"golden_retriever"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Golden Retriever",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"breedName\": \"golden_retriever\",\r\n        \"description\": \"a really nice dog\",\r\n        \"pictureURL\": \"https://t1.ea.ltmcdn.com/es/posts/1/6/2/10_curiosidades_del_golden_retriever_21261_600.jpg\",\r\n        \"height\": 50,\r\n        \"weight\": 45.0,\r\n        \"lifeSpan\": \"10 - 18 years\",\r\n        \"characteristics\": [\"friendly\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save german shepherd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"breedName\": \"german_shepherd\",\r\n        \"description\": \"A family dog\",\r\n        \"pictureURL\": \"https://upload.wikimedia.org/wikipedia/commons/9/94/Cane_da_pastore_tedesco_adulto.jpg\",\r\n        \"height\": 55,\r\n        \"weight\": 50.0,\r\n        \"lifeSpan\": \"10 - 16 years\",\r\n        \"characteristics\": [\"friendly\", \"guardian\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Chihuahua",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"breedName\": \"chihuahua\",\r\n        \"description\": \"The best dog\",\r\n        \"pictureURL\": \"https://upload.wikimedia.org/wikipedia/commons/6/65/Chihuahuasmoothcoat.jpg\",\r\n        \"height\": 20,\r\n        \"weight\": 10.0,\r\n        \"lifeSpan\": \"10 - 20 years\",\r\n        \"characteristics\": [\"friendly\", \"loud\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update dog breed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"breedName\": \"golden_retriever\",\r\n        \"description\": \"a really nice dog, with a lot of hair\",\r\n        \"pictureURL\": \"www2\",\r\n        \"height\": 50,\r\n        \"weight\": 45.0,\r\n        \"lifeSpan\": \"10 - 18 years\",\r\n        \"characteristics\": [\"friendly\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE dog breed by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dogBreeds/delete/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dogBreeds",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

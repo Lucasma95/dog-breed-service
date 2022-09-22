@@ -1,8 +1,11 @@
 package com.animals.dogs.model;
 
 import lombok.*;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +22,7 @@ public class DogBreed {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NonNull
+    @NotBlank(message = "You must provide a breed name")
     @Column(name = "breed_name")
     private String breedName;
 
@@ -28,13 +31,13 @@ public class DogBreed {
     @Column(name = "picture_URL")
     private String pictureURL;
 
-    @NonNull
+    @NotNull(message = "You must provide a height in cm")
     private Long height;
 
-    @NonNull
+    @NotNull(message = "You must provide a weight in kg")
     private Double weight;
 
-    @NonNull
+    @NotBlank(message = "You must provide a life span like: '8 - 12 years'")
     @Column(name = "life_span")
     private String lifeSpan;
 
